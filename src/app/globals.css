@@ -5,8 +5,7 @@
 }
 
 html {
-  font-family: Poppins;
-  color: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -21,16 +20,46 @@ body {
 h1 {
   font-size: 2em;
   color: white;
+  position: relative;
+}
+
+.section-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 5em;
+  height: 0.7em;
+  background: #2b2e38;
+  bottom: -1.5rem;
+  transform: skew(-20deg);
+}
+
+.home-section-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 12em;
+  height: 0.7em;
+  background: #2b2e38;
+  bottom: -1.5rem;
+  transform: skew(-20deg);
+}
+
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Account for fixed header */
 }
 
 /* Project Container and Card Wrapper Styles */
 .project-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0;
-  padding: 2em;
+  padding-top: 2em;
   transition: gap 0.5s ease;
 }
 
@@ -132,7 +161,7 @@ h1 {
   left: 50%;
   border-radius: 10px;
   z-index: -1;
-  background: conic-gradient(from var(--angle), transparent 10%, blue);
+  background: conic-gradient(from var(--angle), transparent 20%, blue, gray);
   animation: 6s spin linear infinite;
 }
 
@@ -142,12 +171,12 @@ h1 {
   width: 100%;
   translate: -50% -50%;
   position: absolute;
-  padding: 6px;
+  padding: 0.5rem;
   top: 50%;
   left: 50%;
   border-radius: 10px;
   z-index: -1;
-  background: conic-gradient(from var(--angle), transparent 10%, blue);
+  background: conic-gradient(from var(--angle), transparent 20%, blue, gray);
   animation: 6s reverse-spin linear infinite;
 }
 
@@ -157,7 +186,7 @@ h1 {
   width: 100%;
   translate: -50% -50%;
   position: absolute;
-  padding: 6px;
+  padding: 0.5rem;
   top: 50%;
   left: 50%;
   border-radius: 10px;
@@ -198,4 +227,110 @@ h1 {
   to {
     --angle: 0deg;
   }
+}
+
+/* Header styling */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2b2e38;
+  padding: 2rem 2rem;
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(to right, #7685a6, blue);
+  transition: width 0.1s ease-out;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  filter: blur(3px);
+  opacity: 0.7;
+}
+.nav-container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  gap: 6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-left {
+  display: flex;
+  padding-left: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  padding-right: 6rem;
+}
+
+.nav-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-size: 1.9rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: rgb(78, 78, 225);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+  .nav-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Section styling */
+.section {
+  min-height: 100vh;
+  padding: 2rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-header {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.home-section-header {
+  margin-bottom: 3rem;
+  position: relative;
 }
