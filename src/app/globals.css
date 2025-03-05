@@ -1,26 +1,201 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Global Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;  
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  font-family: Poppins;
+  color: #f0f0f0;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: #0b0d15;
+  color: #a2a5b3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2em;
+  color: white;
+}
+
+/* Project Container and Card Wrapper Styles */
+.project-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 2em;
+  transition: gap 0.5s ease;
+}
+
+.project-container:hover {
+  gap: 2em;
+}
+
+.card-wrapper {
+  transform: scale(0.9);
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.card-wrapper:first-child {
+  right: -8em;
+}
+
+.card-wrapper:last-child {
+  left: -8em;
+}
+
+.card-wrapper:first-child,
+.card-wrapper:last-child {
+  filter: blur(2px);
+  transform: scale(0.85);
+  z-index: 1;
+}
+
+.card-wrapper:nth-child(2) {
+  transform: scale(0.95);
+  z-index: 2;
+}
+
+/* Hover States */
+.project-container:hover .card-wrapper:first-child {
+  right: 0;
+}
+
+.project-container:hover .card-wrapper:last-child {
+  left: 0;
+}
+
+.project-container:hover .card-wrapper {
+  filter: blur(0);
+  transform: scale(1);
+  margin-left: 0;
+}
+
+/* Card Base Styles */
+.card {
+  margin: 0;
+  padding: 2em;
+  width: 300px;
+  height: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-1 {
+  margin: 0;
+  padding: 2em;
+  width: 300px;
+  height: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.middle_card {
+  margin: 0;
+  padding: 2em;
+  width: 300px;
+  height: 300px;
+  background: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Animation Property */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* Border Gradient Styles */
+.card::before, .card::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  translate: -50% -50%;
+  position: absolute;
+  padding: 6px;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  z-index: -1;
+  background: conic-gradient(from var(--angle), transparent 10%, blue);
+  animation: 6s spin linear infinite;
+}
+
+.card-1::before, .card-1::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  translate: -50% -50%;
+  position: absolute;
+  padding: 6px;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  z-index: -1;
+  background: conic-gradient(from var(--angle), transparent 10%, blue);
+  animation: 6s reverse-spin linear infinite;
+}
+
+.middle_card::before, .middle_card::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  translate: -50% -50%;
+  position: absolute;
+  padding: 6px;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  z-index: -1;
+  background: conic-gradient(blue);
+}
+
+/* Glow Effects */
+.card::after {
+  filter: blur(0.5rem);
+  opacity: 1;
+}
+
+.card-1::after {
+  filter: blur(0.5rem);
+  opacity: 1;
+}
+
+.middle_card::after {
+  filter: blur(0.5rem);
+  opacity: 1;
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+@keyframes reverse-spin {
+  from {
+    --angle: 360deg;
+  }
+  to {
+    --angle: 0deg;
+  }
 }
