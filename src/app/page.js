@@ -58,8 +58,10 @@ export default function Home() {
           </p>
         </section>
 
+        <div className="spacer spacer-1"></div>
+
         {/* About Section */}
-        <section id="about" className="section">
+        <section id="about" className="section" style={{ backgroundColor: '#0071ff' }}>
           <h1 className={`section-header ${noto.className}`}>About Me</h1>
           <p>
             I'm a full-stack developer with expertise in React, Node.js, and modern

@@ -318,11 +318,15 @@ h1 {
 
 /* Section styling */
 .section {
-  min-height: 100vh;
-  padding: 2rem 0rem;
+  min-height: 80vh;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .section-header {
@@ -333,4 +337,24 @@ h1 {
 .home-section-header {
   margin-bottom: 3rem;
   position: relative;
+}
+
+/* ---- section border SVG ---- */
+
+.spacer {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-top: -15vw;
+  margin-left: -50vw;
+  aspect-ratio: 900/200;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+
+.spacer-1 {
+  background-image: url('/backgrounds/layered-waves-black-blue.svg');
 }
