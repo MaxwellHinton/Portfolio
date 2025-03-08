@@ -42,50 +42,6 @@ h1 {
   color: #2b2e38;
 }
 
-.section-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 5em;
-  height: 0.7em;
-  background: #2b2e38;
-  bottom: -1.5rem;
-  transform: skew(-20deg);
-}
-
-.home-section-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 12em;
-  height: 0.7em;
-  background: #2b2e38;
-  bottom: -1.5rem;
-  transform: skew(-20deg);
-}
-
-.about-section-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 6.5em;
-  height: 0.7em;
-  background: #ffffff;
-  bottom: -1.5rem;
-  transform: skew(-20deg);
-}
-
-.contact-section-header::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  width: 8em;
-  height: 0.7em;
-  background: #ffffff;
-  bottom: -1.5rem;
-  transform: skew(-20deg);
-}
-
 .main-container {
   width: 100%;
   max-width: 1200px;
@@ -372,26 +328,6 @@ h1 {
   justify-content: center;
 }
 
-.section-header {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.home-section-header {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.about-section-header {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
-.contact-section-header {
-  margin-bottom: 3rem;
-  position: relative;
-}
-
 /* ---- section border SVG ---- */
 
 .spacer {
@@ -437,4 +373,49 @@ section#projects {
 
 section#contact {
   margin-top: -20vh;
+}
+
+.social-container {
+  position: fixed;
+  top: 0rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 100;
+}
+
+.social-buttons {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #8bcbff;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.social-buttons:hover {
+  transform: scale(1.4);
+}
+
+.social-buttons svg {
+  fill: #000;
+  width: 36px;
+  height: 36px;
+}
+
+.linkedin-btn:hover {
+  background: #0077b5;
+}
+
+.github-btn:hover {
+  background: #333;
+}
+
+.social-buttons:hover svg {
+  fill: white;
 }
