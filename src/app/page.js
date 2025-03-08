@@ -52,8 +52,8 @@ export default function Home() {
       <main className="main-container">
         {/* Home Section */}
         <section id="home" className="section">
-          <h1 className={`home-section-header ${noto.className}`}>Hi there, I'm Maxwell</h1>
-          <p className={`${quicksand.className}`}>
+          <h1 className={`home-section-header ${noto.className} home-h1`}>Hi there, I'm Maxwell</h1>
+          <p className={`${quicksand.className} home-section-paragraph`}>
             A recent Computer Science graduate with a passion for working on full-stack applications.
           </p>
         </section>
@@ -61,15 +61,19 @@ export default function Home() {
         <div className="spacer spacer-1"></div>
 
         {/* About Section */}
-        <section id="about" className="section" style={{ backgroundColor: '#0071ff' }}>
-          <h1 className={`section-header ${noto.className}`}>About Me</h1>
-          <p>
-            I'm a full-stack developer with expertise in React, Node.js, and modern
-            web technologies. With a strong foundation in computer science and a
-            keen eye for detail, I strive to build efficient and user-friendly
-            applications.
-          </p>
-        </section>
+        <div className="full-width-background" style={{ backgroundColor: '#4ba9f6' }}>
+          <section id="about" className="section">
+            <h1 className={`about-section-header ${noto.className} about-h1`}>About Me</h1>
+            <p className={`${quicksand.className} about-section-paragraph`}>
+              I'm a full-stack developer with expertise in React, Node.js, and modern
+              web technologies. With a strong foundation in computer science and a
+              keen eye for detail, I strive to build efficient and user-friendly
+              applications.
+            </p>
+          </section>
+        </div>
+
+        <div className="spacer spacer-2 margin-top"></div>
 
         {/* Projects Section */}
         <section id="projects" className="section">
@@ -118,14 +122,18 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="spacer spacer-1"></div>
+
         {/* Contact Section */}
+        <div className="full-width-background" style={{ backgroundColor: '#4ba9f6' }}>
         <section id="contact" className="section">
-          <h1 className={`section-header ${noto.className}`}>Get In Touch</h1>
-          <p>
+          <h1 className={`contact-section-header ${noto.className} about-h1`}>Get In Touch</h1>
+          <p className={`${quicksand.className} about-section-paragraph`}>
             I'm always open to new opportunities and collaborations. Feel free to
-            reach out to me at [your@email.com] or connect with me on LinkedIn.
-          </p>
-        </section>
+            reach out to me at maxwell@maxwell.com or connect with me on LinkedIn.
+            </p>
+          </section>
+        </div>
       </main>
     </>
   );
