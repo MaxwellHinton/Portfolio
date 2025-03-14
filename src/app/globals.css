@@ -673,3 +673,73 @@ section#contact {
 .custom-btn:disabled .btn2:hover::after {
   transform: none;
 }
+
+/* Project button styles */
+.project-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 2px solid;
+}
+
+.github-project-btn {
+  background-color: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+.github-project-btn:hover {
+  background-color: #0035e0;
+  border-color: #446aff;
+}
+
+.live-project-btn {
+  background-color: #24292e;
+  color: white;
+  border-color: #24292e;
+}
+
+.live-project-btn:hover {
+  background-color: #0035e0;
+  border-color: #446aff;
+}
+
+.btn-icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Adjust content spacing in cards */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-content h1 {
+  margin-bottom: 0.75rem;
+}
+
+.card-content p {
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+}
+
+/* Ensure buttons are positioned at the bottom */
+.card, .card-1, .middle_card {
+  display: flex;
+  flex-direction: column;
+}
