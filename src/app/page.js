@@ -320,7 +320,7 @@ export default function Home() {
         <main className="main-container">
           {/* Home Section */}
           <section id="home" className="section">
-            <h1 id="home-heading" className={`${noto.className} home-h1`}>Hi there, I'm Maxwell</h1>
+            <h1 id="home-heading" className={`${noto.className} home-h1`}>Hi there, I&apos;m Maxwell</h1>
             <p data-bg-color="#383838" data-fg-color="#ffffff"id="home-paragraph" className={`${quicksand.className} home-section-paragraph animated-paragraph`}>
               A recent Computer Science graduate with a passion for learning and working on full-stack applications. 
             </p>
@@ -333,7 +333,7 @@ export default function Home() {
             <section id="about" className="section">
               <h1 id="about-heading" className={`${noto.className} about-h1`}>About Me</h1>
               <p data-bg-color="#5d5d5d" data-fg-color="#000000" id="about-paragraph" className={`${quicksand.className} about-section-paragraph animated-paragraph`}>
-                I'm an aspiring full-stack developer with expertise in React, Node.js, and modern
+                I&apos;m an aspiring full-stack developer with expertise in React, Node.js, and modern
                 web technologies. With a strong foundation in computer science and a
                 keen eye for detail, I strive to build efficient and user-friendly
                 applications.
@@ -449,7 +449,7 @@ export default function Home() {
 
               <div className='contact-container'>
                 <p id="contact-paragraph" className={`${quicksand.className} contact-section-paragraph animated-paragraph`}>
-                  <br></br>I'm always open to new opportunities, collaborations, and advice on how to grow and learn. Feel free to send me an email below,
+                  <br></br>I&apos;m always open to new opportunities, collaborations, and advice on how to grow and learn. Feel free to send me an email below,
                   or connect with me on LinkedIn.
                 </p>
                 <div className="form-container">
