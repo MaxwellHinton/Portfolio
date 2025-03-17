@@ -42,11 +42,13 @@ h1 {
 .about-section-paragraph {
   font-size: 2.5rem;
   color: #2b2e38;
+  overflow-wrap: normal;
 }
 
 .contact-section-paragraph {
   font-size: 2.3rem;
   color: #2b2e38;
+  overflow-wrap: normal;
 }
 
 .projects-paragraph {

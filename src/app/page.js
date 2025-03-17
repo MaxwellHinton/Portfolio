@@ -332,10 +332,10 @@ export default function Home() {
           <div className="full-width-background" style={{ backgroundColor: '#4ba9f6' }}>
             <section id="about" className="section">
               <h1 id="about-heading" className={`${noto.className} about-h1`}>About Me</h1>
-              <p data-bg-color="#5d5d5d" data-fg-color="#000000" id="about-paragraph" className={`${quicksand.className} about-section-paragraph animated-paragraph`}>
+              <p data-bg-color="#95a9ff" data-fg-color="#000000" id="about-paragraph" className={`${quicksand.className} about-section-paragraph animated-paragraph`}>
                 I&apos;m an aspiring full-stack developer with expertise in React, Node.js, and modern
-                web technologies. With a strong foundation in computer science and a
-                keen eye for detail, I strive to build efficient and user-friendly
+                web technologies. With a strong foundation<br></br> in computer science and a
+                keen eye for detail, I strive to build<br></br> efficient and user-friendly
                 applications.
               </p>
             </section>
@@ -449,8 +449,8 @@ export default function Home() {
 
               <div className='contact-container'>
                 <p id="contact-paragraph" className={`${quicksand.className} contact-section-paragraph animated-paragraph`}>
-                  <br></br>I&apos;m always open to new opportunities, collaborations, and advice on how to grow and learn. Feel free to send me an email below,
-                  or connect with me on LinkedIn.
+                  <br></br>I&apos;m always open to new <br></br>opportunities, collaborations, and advice on how to grow and learn. Feel free to send me an email<br></br> below,
+                  or connect with me via <br></br>LinkedIn.
                 </p>
                 <div className="form-container">
                   <form className="form"
